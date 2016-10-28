@@ -8,6 +8,8 @@ using System.Windows.Forms;
 
 public class UnityObject
 {
+    public string name;
+
     bool DestroyFlag;
 
     public UnityObject()

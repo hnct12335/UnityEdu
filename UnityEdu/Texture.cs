@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Sprite : Object
+
+class Texture : Object
 {
-    Texture2D texture;
-    Texture2D associatedAlphaSplitTexture;
+    public int height;
+    public int width;
 }
 

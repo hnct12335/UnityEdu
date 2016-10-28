@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Sprite : Object
+
+class MonoBehaviour : Behaviour
 {
-    Texture2D texture;
-    Texture2D associatedAlphaSplitTexture;
 }
 
