@@ -12,10 +12,11 @@ public class UnityObject
 
     bool DestroyFlag;
 
-    public UnityObject()
+    public UnityObject(string s)
     {
         DestroyFlag = false;
-        MessageBox.Show("コンストラクト");
+        this.name = s;
+        MessageBox.Show("コンストラクト" + name);
     }
 
     public void Destroy(UnityObject obj, float t)
@@ -35,7 +36,7 @@ public class UnityObject
 
     public static Object Instantiate(UnityObject original, Vector3 position)
     {
-        UnityObject obj = new UnityObject();
+        UnityObject obj = new UnityObject(original.name + "_copy");
 
         UnitySystem.AddNewObject(obj);
 
@@ -44,6 +45,6 @@ public class UnityObject
 
     ~UnityObject()
     {
-        MessageBox.Show("デストラクト");
+        MessageBox.Show("デストラクト" + name);
     }
 }

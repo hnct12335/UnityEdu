@@ -5,5 +5,9 @@ using System.Text;
 
 public class Renderer : Component
     {
+    public Renderer(string name)
+        : base(name)
+    {
+    }
     }
 

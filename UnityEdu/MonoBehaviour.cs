@@ -6,5 +6,11 @@ using System.Text;
 
 class MonoBehaviour : Behaviour
 {
+    public MonoBehaviour(string name)
+        : base(name)
+    {
+    }
+    public void Update(){
+    }
 }
 

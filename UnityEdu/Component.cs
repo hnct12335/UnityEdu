@@ -4,8 +4,12 @@ using System.Linq;
 using System.Text;
 
 
-public class Component : Object
+public class Component : UnityObject
 {
-    public GameObject gameObject;
-    public Transform transform;
+    public Component(string name)
+        : base(name)
+    {
+    }
+    //public GameObject gameObject;
+    //public Transform transform;
 }
