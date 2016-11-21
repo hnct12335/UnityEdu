@@ -15,6 +15,7 @@ namespace UnityEdu
     {
         public GameObject obj0;
         SpriteRenderer Srend;
+        public TestObject obj1;
 
         Bitmap canvas;
         Graphics g;
@@ -24,6 +25,7 @@ namespace UnityEdu
             InitializeComponent();
             obj0 = new GameObject("obj0");
             Srend = new SpriteRenderer("tori.png", "SRendTori");
+            obj1 = new TestObject("TestObj");
 
             canvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             g = Graphics.FromImage(canvas);
@@ -50,5 +52,17 @@ namespace UnityEdu
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            obj0.Instantiate(obj1);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            obj1.testscript.Update();
+        }
+
+
     }
 }

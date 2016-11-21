@@ -56,6 +56,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GameObject.cs" />
+    <Compile Include="Hierarchy.cs" />
     <Compile Include="MonoBehaviour.cs" />
     <Compile Include="Object.cs" />
     <Compile Include="Program.cs" />
@@ -63,6 +64,8 @@
     <Compile Include="Renderer.cs" />
     <Compile Include="Sprite.cs" />
     <Compile Include="SpriteRenderer.cs" />
+    <Compile Include="TestObject.cs" />
+    <Compile Include="TestScript.cs" />
     <Compile Include="Texture.cs" />
     <Compile Include="Texture2D.cs" />
     <Compile Include="TextureImporter.cs" />

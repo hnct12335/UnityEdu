@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 
-class Behaviour : Component
+public class Behaviour : Component
 {
     public Behaviour(string name)
         : base(name)
