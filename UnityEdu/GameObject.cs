@@ -23,6 +23,16 @@ public class GameObject : UnityObject
         com.transform = this.transform;
     }
 
+    public Component GetComponent<Type>()
+    {
+        for (int i = 0; i < Components.Count; i++)
+        {
+            if (Components[i] is Type) return Components[i];
+        }
+
+        return null;
+    }
+
     public override void Update()
     {
         foreach (UnityObject i in Components)

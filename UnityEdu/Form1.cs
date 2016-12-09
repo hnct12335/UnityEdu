@@ -49,12 +49,13 @@ namespace UnityEdu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            obj1 = new TestObject("TestObj");            
+            obj1 = new TestObject("TestObj"); 
+            MessageBox.Show(obj1.GetComponent<Transform>().x.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
