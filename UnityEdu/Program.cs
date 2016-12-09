@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace UnityEdu
 {
     static class Program
     {
+        static Form1 f;
         /// <summary>
         /// アプリケーションのメイン エントリ ポイントです。
         /// </summary>
@@ -15,7 +17,12 @@ namespace UnityEdu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            f = new Form1();
+            Application.Run(f);
+        }
+
+        static public void Draw(Image img, int x, int y){
+            f.Draw(img, x, y);
         }
     }
 }

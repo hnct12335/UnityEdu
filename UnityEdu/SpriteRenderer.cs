@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using System.Windows.Forms;
 public class SpriteRenderer : Renderer
 {
     public Sprite sprite;
     Image image;
 
+
     public SpriteRenderer(string pass, string name):base(name)
     {
         image = Image.FromFile(pass);
+        sprite = new Sprite(pass, name);
     }
 
     ~SpriteRenderer()
@@ -18,9 +21,9 @@ public class SpriteRenderer : Renderer
         image.Dispose();
     }
 
-    public Image getImage()
+    public override void Update()
     {
-        return image;
+        UnityEdu.Program.Draw(image);
     }
 
 }

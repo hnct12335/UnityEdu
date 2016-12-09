@@ -11,7 +11,7 @@ public class UnityObject
     public string name;
 
     bool DestroyFlag;
-
+    public Transform transform;
     public UnityObject(string s)
     {
         DestroyFlag = false;
@@ -42,6 +42,8 @@ public class UnityObject
 
         return original;
     }
+
+    public virtual void Update() { }
 
     ~UnityObject()
     {

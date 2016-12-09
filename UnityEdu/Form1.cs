@@ -9,43 +9,47 @@ using System.Windows.Forms;
 
 namespace UnityEdu
 {
-    
+
 
     public partial class Form1 : Form
     {
         public GameObject obj0;
-        SpriteRenderer Srend;
+        //SpriteRenderer Srend;
         public TestObject obj1;
 
         Bitmap canvas;
         Graphics g;
 
+
+
         public Form1()
         {
             InitializeComponent();
             obj0 = new GameObject("obj0");
-            Srend = new SpriteRenderer("tori.png", "SRendTori");
-            obj1 = new TestObject("TestObj");
+            //Srend = new SpriteRenderer("tori.png", "SRendTori");
+            
 
             canvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             g = Graphics.FromImage(canvas);
         }
+
+        
 
         ~Form1()
         {
             g.Dispose();
         }
 
+        public void Draw(Image img, int x, int y)
+        {
+            //MessageBox.Show("drow()");
+            g.DrawImage(img, x, y, img.Width, img.Height);
+            pictureBox1.Image = canvas;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Image temp;
-            temp = Srend.getImage();
-
-            obj0.Instantiate(obj0);
-            g.DrawImage(temp, 0, 0, temp.Width, temp.Height);
-            pictureBox1.Image = canvas;
-
-            
+            obj1 = new TestObject("TestObj");            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -60,7 +64,8 @@ namespace UnityEdu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            obj1.testscript.Update();
+            obj1.Update();
+
         }
 
 

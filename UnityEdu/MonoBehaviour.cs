@@ -12,7 +12,7 @@ public class MonoBehaviour : Behaviour
     }
 
     public void Start() { }
-    public void Update(){
-    }
+
+
 }
 

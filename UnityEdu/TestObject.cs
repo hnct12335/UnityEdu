@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 
 
-public class TestObject : UnityObject
+public class TestObject : GameObject
 {
-    public TestScript testscript;
     public TestObject(string s) : base(s)
     {
-        testscript = new TestScript("testsc");
+        Attach(new TestScript("testsc"));
+        Attach(new SpriteRenderer("tori.png", "birdtest"));
     }
 }
 
