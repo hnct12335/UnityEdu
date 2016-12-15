@@ -23,7 +23,7 @@ public class SpriteRenderer : Renderer
 
     public override void Update()
     {
-        UnityEdu.Program.Draw(image, this.transform.postion.x, this.transform.postion.y);
+        UnityEdu.Program.Draw(this.image, transform.postion.x, transform.postion.y);
     }
 
 }

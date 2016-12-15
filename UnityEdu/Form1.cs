@@ -30,7 +30,9 @@ namespace UnityEdu
             
 
             canvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            g = Graphics.FromImage(canvas);
+            g = Graphics.FromImage(canvas); 
+            
+            obj1 = new TestObject("TestObj"); 
         }
 
         
@@ -40,17 +42,18 @@ namespace UnityEdu
             g.Dispose();
         }
 
-        public void Draw(Image img, int x, int y)
+        public void Draw(Image img, float x, float y)
         {
             //MessageBox.Show("drow()");
+            g.Clear(Color.White);
             g.DrawImage(img, x, y, img.Width, img.Height);
             pictureBox1.Image = canvas;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            obj1 = new TestObject("TestObj"); 
-            MessageBox.Show(obj1.GetComponent<Transform>().x.ToString();
+            
+            //MessageBox.Show(obj1.GetComponent<Transform>().x.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -67,6 +70,16 @@ namespace UnityEdu
         {
             obj1.Update();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.timer1.Enabled = !this.timer1.Enabled;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            obj1.Update();
         }
 
 

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 public class GameObject : UnityObject
 {
     List<Component> Components;
-    public Transform transform;
+    //public Transform transform;
     public GameObject(string name)
         : base(name)
     {
@@ -37,7 +37,7 @@ public class GameObject : UnityObject
     {
         foreach (UnityObject i in Components)
         {
-            MessageBox.Show("Update呼び出し");
+            //MessageBox.Show("Update呼び出し");
             i.Update();
         }
     }

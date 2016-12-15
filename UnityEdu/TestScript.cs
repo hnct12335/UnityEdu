@@ -13,15 +13,16 @@ public class TestScript : MonoBehaviour
         n = 0;
     }
 
-    void Start()
+    public void Start()
     {
         MessageBox.Show("Start()");
     }
 
     public override void Update()
     {
-        MessageBox.Show("Update()\nn="+n.ToString());
+        //MessageBox.Show("Update()\nn="+n.ToString());
         this.transform.postion.x+=1;
+        this.transform.postion.y += 2;
         n++;
     }
 }

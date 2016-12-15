@@ -21,7 +21,7 @@ namespace UnityEdu
             Application.Run(f);
         }
 
-        static public void Draw(Image img, int x, int y){
+        static public void Draw(Image img, float x, float y){
             f.Draw(img, x, y);
         }
     }

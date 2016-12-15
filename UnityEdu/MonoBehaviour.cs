@@ -11,7 +11,6 @@ public class MonoBehaviour : Behaviour
     {
     }
 
-    public void Start() { }
 
 
 }
