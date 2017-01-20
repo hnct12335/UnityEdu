@@ -65,7 +65,7 @@ namespace UnityEdu
         private void button2_Click(object sender, EventArgs e)
         {
             //obj0.Instantiate(obj1);
-            UnityObject.Instantiate<TestObject>(obj1);
+            UnityObject.Instantiate(obj1);
         }
 
         private void button3_Click(object sender, EventArgs e)
