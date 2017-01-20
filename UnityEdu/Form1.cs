@@ -25,14 +25,15 @@ namespace UnityEdu
         public Form1()
         {
             InitializeComponent();
-            obj0 = new GameObject("obj0");
+            //obj0 = new GameObject("obj0");
             //Srend = new SpriteRenderer("tori.png", "SRendTori");
             
 
             canvas = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             g = Graphics.FromImage(canvas); 
             
-            obj1 = new TestObject("TestObj"); 
+            obj1 = new TestObject("Tori");
+            UnitySystem.AddNewObject(obj1);
         }
 
         
@@ -63,12 +64,13 @@ namespace UnityEdu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            obj0.Instantiate(obj1);
+            //obj0.Instantiate(obj1);
+            UnityObject.Instantiate<TestObject>(obj1);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            obj1.Update();
+            UnitySystem.Update();
 
         }
 
@@ -79,7 +81,7 @@ namespace UnityEdu
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            obj1.Update();
+            UnitySystem.Update();
         }
 
 

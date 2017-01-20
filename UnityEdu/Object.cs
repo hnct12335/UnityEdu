@@ -25,22 +25,27 @@ public class UnityObject
     }
 
 
-    public void Instantiate(UnityObject original)
+    public static T Instantiate<T>(T original) where T : UnityObject
     {
         Vector3 temp;
         temp.x = 0;
         temp.y = 0;
         temp.z = 0;
-        Instantiate(original, temp);
+        return Instantiate(original, temp);
     }
 
-    public static Object Instantiate(UnityObject original, Vector3 position)
+    public static T Instantiate<T>(T original, Vector3 position) where T : UnityObject
     {
-        UnityObject obj = new UnityObject(original.name + "_copy");
+        MessageBox.Show("Instantiate");
+
+        T obj = (T)Activator.CreateInstance(typeof(T), original.name + "_copy");
+            
+//            new UnityObject(original.name + "_copy");
+        obj.transform = new Transform(original.name+"trans");
 
         UnitySystem.AddNewObject(obj);
 
-        return original;
+        return obj;
     }
 
     public virtual void Update() { }
