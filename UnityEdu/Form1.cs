@@ -46,7 +46,6 @@ namespace UnityEdu
         public void Draw(Image img, float x, float y)
         {
             //MessageBox.Show("drow()");
-            g.Clear(Color.White);
             g.DrawImage(img, x, y, img.Width, img.Height);
             pictureBox1.Image = canvas;
         }
@@ -70,7 +69,7 @@ namespace UnityEdu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UnitySystem.Update();
+            UnitySystem.Update(g);
 
         }
 
@@ -81,7 +80,7 @@ namespace UnityEdu
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            UnitySystem.Update();
+            UnitySystem.Update(g);
         }
 
 

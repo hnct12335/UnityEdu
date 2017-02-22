@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 
 
@@ -15,8 +16,9 @@ static public class UnitySystem
         hierarcy.Add(obj);
     }
 
-    public static void Update()
+    public static void Update(Graphics g)
     {
+        g.Clear(Color.White);
         foreach (UnityObject obj in hierarcy)
         {
             obj.Update();
